@@ -1,0 +1,3 @@
+label_encoder = joblib.load("model/label_encoder.pkl")
+...
+gesture = label_encoder.inverse_transform([prediction])[0]
