@@ -3,6 +3,12 @@ import mediapipe as mp
 import numpy as np
 import joblib
 
+cap = cv2.VideoCapture(0)  # Try 0, 1, 2, etc., to find the correct index
+if not cap.isOpened():
+    print("Error: Could not open camera.")
+else:
+    print("Camera opened successfully.")
+
 # Load trained gesture classifier
 model = joblib.load("model/isl_gesture_model.pkl")
 
